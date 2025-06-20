@@ -1,5 +1,5 @@
 // Map to names
-let names = users.map((user) => user.name);
+let names = users.map(item => item.name);
 
 // Map to Objects
 let usersMapped = users.map((user) => ({
@@ -19,8 +19,8 @@ function getAverageAge(users){
 
 // Create Keyed Object from Array
 function groupById(arr){
-    Array.reduce((obj, num) => {
-        obj[num.id] = num;
+    return arr.reduce((obj, item) => {
+        obj[item.id] = item;
         return obj;
-    })
+    }, {});
 }
